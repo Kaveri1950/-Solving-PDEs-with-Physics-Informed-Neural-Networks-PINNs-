@@ -1,1 +1,1 @@
-# -Solving-PDEs-with-Physics-Informed-Neural-Networks-PINNs-
+# Solving PDEs with Physics Informed Neural Networks (PINNs)
