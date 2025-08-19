@@ -1,20 +1,16 @@
 # Solving PDEs with Physics Informed Neural Networks (PINNs)
 
 
-# 🌌 PINNs for Diffusion Problems
+# PINNs for Diffusion Problems
 
 This project contains two case studies where we apply **Physics-Informed Neural Networks (PINNs)** to solve diffusion-type equations using **DeepXDE (TensorFlow backend)** and a **custom PyTorch implementation**.
 
----
-
-## 📂 Project Structure
+## Project Structure
 
 - `01_log_gamma_diffusion.ipynb` → Diffusion in **log-γ space** (DeepXDE)  
 - `02_gaussian_diffusion.ipynb` → Gaussian diffusion (DeepXDE + PyTorch)  
 
----
-
-## 📌 Case 1: Diffusion in log-γ Space (DeepXDE)
+## Case 1: Diffusion in log-γ Space (DeepXDE)
 
 We solve a PDE in transformed **logarithmic γ-space**:
 
@@ -27,11 +23,9 @@ We solve a PDE in transformed **logarithmic γ-space**:
 - **Initial condition:** Delta-function like peak at \(\gamma_0 = 100\)  
 - **Boundary condition:** Zero-flux (Neumann) at domain boundaries  
 
-✅ PINN solution matches the **analytical Green’s function solution** with ~**6.3% relative error**.
+PINN solution matches the **analytical Green’s function solution** with ~**6.3% relative error**.
 
----
-
-## 📌 Case 2: Gaussian Diffusion
+## Case 2: Gaussian Diffusion
 
 We solve the **1D heat/diffusion equation**:
 
@@ -55,20 +49,19 @@ u(x,t) = \frac{1}{\sqrt{1+2Dt}}
 \exp\!\left(-\frac{x^2}{2\sigma^2(1+2Dt)}\right)
 \]
 
-### 🔹 Implementation A: DeepXDE
+### Implementation A: DeepXDE
 - Used `FNN` with tanh activations.  
 - Accuracy was **poor (~62% relative error)** with a shallow network.  
 - Needs larger architecture & better collocation sampling.
 
-### 🔹 Implementation B: PyTorch PINN
+### Implementation B: PyTorch PINN
 - PDE residual, IC, and BC losses coded manually.  
 - Network: fully connected MLP with tanh activations.  
 - Trained with Adam optimizer.  
-- ✅ Achieved **good match to analytical solution** — Gaussian broadens as expected.
+- Achieved **good match to analytical solution** — Gaussian broadens as expected.
 
----
 
-## 📊 Results Summary
+## Results Summary
 
 | Case | Framework | Accuracy | Notes |
 |------|-----------|----------|-------|
@@ -76,9 +69,8 @@ u(x,t) = \frac{1}{\sqrt{1+2Dt}}
 | Gaussian diffusion | DeepXDE | ~62% error | Too shallow NN |
 | Gaussian diffusion | PyTorch PINN | Low error | Good agreement |
 
----
 
-## 🚀 How to Run
+## How to Run
 
 ### Install dependencies
 ```bash
