@@ -36,7 +36,7 @@ $$
 $$
 y(g,\tau) =
 \frac{1}{\gamma \,\sqrt{4\pi \tau}}
-\exp\!\left(
+\exp\left(
 -\frac{(\ln(\gamma_0/\gamma)+\tau)^2}{4\tau}
 \right),
 \qquad
@@ -73,7 +73,7 @@ $$
 $$
 u(x,t) =
 \frac{1}{\sqrt{1+2Dt}}
-\exp\!\left(
+\exp\left(
 -\frac{(x-x_0)^2}{2\sigma^2(1+2Dt)}
 \right).
 $$
