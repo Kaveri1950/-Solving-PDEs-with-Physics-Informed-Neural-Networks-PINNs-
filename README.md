@@ -18,7 +18,8 @@ We transform $y$ via $h = \log y$ and work in $(g,\tau)$ where $g=\ln \gamma$.
 ### PDE (implemented in the notebook)
 
 $$
-\frac{\partial h}{\partial \tau} $$
+\frac{\partial h}{\partial \tau}
+$$
 =
 $$
 \frac{\partial^2 h}{\partial g^2}
