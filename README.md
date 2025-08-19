@@ -60,7 +60,7 @@ $$
 ### Initial Condition (Gaussian)
 $$
 u(x,0) =
-\exp\!\left(-\frac{(x-x_0)^2}{2\sigma^2}\right),
+\exp\left(-\frac{(x-x_0)^2}{2\sigma^2}\right),
 \qquad x_0=0.5,\; \sigma=0.1 .
 $$
 
