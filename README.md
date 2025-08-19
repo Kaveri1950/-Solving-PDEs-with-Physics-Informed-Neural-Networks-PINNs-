@@ -18,17 +18,16 @@ We transform $y$ via $h = \log y$ and work in $(g,\tau)$ where $g=\ln \gamma$.
 ### PDE (implemented in the notebook)
 
 
-$
-\frac{\partial h}{\partial \tau}
-$
-=
 $$
+\frac{\partial h}{\partial \tau}
+=
 \frac{\partial^2 h}{\partial g^2}
 +
 \left(\frac{\partial h}{\partial g}\right)^{2}
 +
-\frac{\partial h}{\partial g}.
+\frac{\partial h}{\partial g}
 $$
+
 
 ### Domain and Conditions
 - Domain: $g \in [\ln 1, \ln 10^6],\; \tau \in [1,3]$  
