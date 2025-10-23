@@ -13,7 +13,7 @@ This repository contains two case studies of solving diffusion-type PDEs using *
 
 ## Case 1 — Diffusion in log-γ Space (DeepXDE)
 
-We transform $y$ via $h = \log y$ and work in $(g,\tau)$ where $g=\ln \gamma$.
+We transform $y$ via $h = \log y$ and work in $(g\tau)$ where $g=\ln \gamma$.
 
 ### PDE (implemented in the notebook)
 
@@ -28,19 +28,19 @@ $$
 
 
 ### Domain and Conditions
-- Domain: $g \in [\ln 1, \ln 10^6],\; \tau \in [1,3]$  
+- Domain: $g \in [\ln 1, \ln 10^6]\; \tau \in [1,3]$  
 - BCs: Zero-flux (Neumann) at both $g$ boundaries  
 - IC: Analytic solution at $\tau=1$
 
 ### Analytic solution for $y$
 $$
-y(g,\tau) =
+y(g\tau) =
 \frac{1}{\gamma \,\sqrt{4\pi \tau}}
 \exp\left(
 -\frac{(\ln(\gamma_0/\gamma)+\tau)^2}{4\tau}
-\right),
+\right)
 \qquad
-\gamma = e^g,\;\; \gamma_0 = 100 .
+\gamma = e^g\\; \gamma_0 = 100 .
 $$
 
 We train a PINN on $h=\log y$ and compare $y_{\text{PINN}} = \exp(h)$ with $y_{\text{analytic}}$.
